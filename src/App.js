@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from "./Button";
+import { GoHeart, GoInfo } from "react-icons/go";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <Button secondary>
+          <GoHeart />
+          Hey There!
+        </Button>
+      </div>
+      <div>
+        <Button success>
+          <GoHeart />
+          Buy Now!
+        </Button>
+      </div>
+      <div>
+        <Button warning>
+          <GoInfo />
+          See Deal!
+        </Button>
+      </div>
+      <div>
+        <Button danger>Hide Ads!</Button>
+      </div>
+      <div>
+        <Button primary outline rounded>
+          Something!
+        </Button>
+      </div>
     </div>
   );
 }
