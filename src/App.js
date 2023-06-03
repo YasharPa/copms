@@ -1,37 +1,27 @@
-import Button from "./Button";
-import { GoHeart, GoInfo } from "react-icons/go";
+import Accordion from "./components/Accordion";
 
 function App() {
-  return (
-    <div>
-      <div>
-        <Button secondary>
-          <GoHeart />
-          Hey There!
-        </Button>
-      </div>
-      <div>
-        <Button success>
-          <GoHeart />
-          Buy Now!
-        </Button>
-      </div>
-      <div>
-        <Button warning>
-          <GoInfo />
-          See Deal!
-        </Button>
-      </div>
-      <div>
-        <Button danger>Hide Ads!</Button>
-      </div>
-      <div>
-        <Button primary outline rounded>
-          Something!
-        </Button>
-      </div>
-    </div>
-  );
+  const items = [
+    {
+      id: "asdasd322",
+      label: "Can i use react?",
+      content:
+        "yes, why not? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
+    },
+    {
+      id: "123asd",
+      label: "Can i use JS?",
+      content:
+        " ever since the 1500s, when an unknown printer took a galley of type and scrambled it ",
+    },
+    {
+      id: "asdads",
+      label: "Can i use CSS and HTML?",
+      content:
+        "to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    },
+  ];
+  return <Accordion items={items} />;
 }
 
 export default App;
