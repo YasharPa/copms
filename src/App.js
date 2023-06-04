@@ -1,27 +1,22 @@
-import Accordion from "./components/Accordion";
+import { useState } from "react";
+import Dropdown from "./components/DropDown";
 
 function App() {
-  const items = [
-    {
-      id: "asdasd322",
-      label: "Can i use react?",
-      content:
-        "yes, why not? Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text",
-    },
-    {
-      id: "123asd",
-      label: "Can i use JS?",
-      content:
-        " ever since the 1500s, when an unknown printer took a galley of type and scrambled it ",
-    },
-    {
-      id: "asdads",
-      label: "Can i use CSS and HTML?",
-      content:
-        "to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    },
+  const [selection, setSelection] = useState(null);
+
+  const handleSelect = (option) => {
+    setSelection(option);
+  };
+
+  const options = [
+    { label: "Red", value: "red" },
+    { label: "Green", value: "green" },
+    { label: "Blue", value: "blue" },
   ];
-  return <Accordion items={items} />;
+
+  return (
+    <Dropdown options={options} value={selection} onChange={handleSelect} />
+  );
 }
 
 export default App;
