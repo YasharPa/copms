@@ -10,7 +10,6 @@ function Link({ to, children, className, activeClassName }) {
     currentPath === to && activeClassName
   );
   const handleClick = (event) => {
-    console.log(event);
     if (event.metaKey || event.ctrlKey) {
       return;
     }
